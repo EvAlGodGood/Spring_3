@@ -34,4 +34,14 @@ public class ProductsRepository {
     public void save(Product product) {
         products.add(product);
     }
+
+    public void plusPrice(Long id){
+        products.stream().filter(s -> s.getId().equals(id)).findFirst().get().setPrice(products.stream().filter(s -> s.getId().equals(id)).findFirst().get().getPrice()+1);
+    }
+
+    public void minusPrice(Long id){
+        products.stream().filter(s -> s.getId().equals(id)).findFirst().get().setPrice(products.stream().filter(s -> s.getId().equals(id)).findFirst().get().getPrice()-1);
+    }
+
+
 }

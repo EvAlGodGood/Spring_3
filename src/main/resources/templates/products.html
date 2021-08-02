@@ -26,6 +26,9 @@
             <td th:text="${s.price}"></td>
             <td>
                 <a th:href="@{'/show/' + ${s.id}}" class="btn btn-primary">Информация</a>
+                <a th:href="@{'/plusPrice/' + ${s.id}}" class="btn btn-primary"> + </a>
+                <a th:href="@{'/minusPrice/' + ${s.id}}" class="btn btn-primary"> - </a>
+
             </td>
         </tr>
         </tbody>

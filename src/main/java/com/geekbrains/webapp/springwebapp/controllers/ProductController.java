@@ -43,4 +43,18 @@ public class ProductController {
         productsService.save(product);
         return "redirect:/show_all";
     }
+
+    @GetMapping("/plusPrice/{id}")
+    public String plusPrice(Model model, @PathVariable Long id) {
+        productsService.plusPrice(id);
+        return "redirect:/show_all";
+    }
+
+    @GetMapping("/minusPrice/{id}")
+    public String minusPrice(Model model, @PathVariable Long id) {
+        productsService.minusPrice(id);
+        return "redirect:/show_all";
+    }
+
+
 }

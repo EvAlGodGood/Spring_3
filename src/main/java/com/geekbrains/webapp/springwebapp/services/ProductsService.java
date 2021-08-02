@@ -27,4 +27,12 @@ public class ProductsService {
     public void save(Product product) {
         productsRepository.save(product);
     }
+
+    public void plusPrice(Long id) {
+        productsRepository.plusPrice(id);
+    }
+
+    public void minusPrice(Long id) {
+        productsRepository.minusPrice(id);
+    }
 }
