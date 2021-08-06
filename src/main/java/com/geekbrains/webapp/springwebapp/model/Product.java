@@ -1,8 +1,18 @@
 package com.geekbrains.webapp.springwebapp.model;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "productsall")
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "price")
     private int price;
 
     public Long getId() {
@@ -36,6 +46,10 @@ public class Product {
         this.id = id;
         this.name = name;
         this.price = price;
+    }
+
+    public void print() {
+        System.out.println("Product id = " + id + "; Name = " + name + "; Price = " + price);
     }
 }
 

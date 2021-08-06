@@ -28,11 +28,11 @@ public class ProductsService {
         productsRepository.save(product);
     }
 
-    public void plusPrice(Long id) {
+    /*public void plusPrice(Long id) {
         productsRepository.plusPrice(id);
     }
 
     public void minusPrice(Long id) {
         productsRepository.minusPrice(id);
-    }
+    }*/
 }
